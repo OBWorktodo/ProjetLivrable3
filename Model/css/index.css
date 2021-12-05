@@ -1,3 +1,70 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap");
+.title {
+  font-family: "Shrikhand", Arial, sans-serif;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 10px;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0px;
+}
+
+/*
+header {
+  font-family: "Shrikhand", sans-serif;
+    & h1 {
+        text-align: center;
+        border: 1px solid $vert-clair;
+        font-family: "Shrikhand, sans-serif";
+        padding: 0.7rem;
+        box-shadow: 0px 3px 1px lightgrey;
+        position: relative;
+    }
+    & p{
+
+    }
+    & p:hover{
+
+    }
+    & p::before{
+
+    }
+    & p::after{
+
+    }
+
+}
+
+.container{
+    background-attachment: fixed;
+    & ol {
+
+        & li{
+
+            & i{
+
+            }
+        }
+    }
+}
+*/
+.localisation {
+  text-align: center;
+  padding: 1rem;
+  background-color: lightgray;
+  border: 1px solid orange;
+}
+
+.footer {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
 /*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
 html,
 body,
@@ -74,4 +141,89 @@ table {
 td,
 th {
   padding: 0;
+}
+
+*,
+::before ::after {
+  box-sizing: border-box;
+  border: 1px solid blue;
+}
+
+main .fas fa-map-marker-alt {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+main .fas fa-map-marker-alt i {
+  font-size: 2rem;
+}
+
+.réservation {
+  text-align: center;
+}
+
+.réservation h2 {
+  margin-top: 3rem;
+  font-size: 1.5rem;
+}
+
+.réservation button {
+  color: white;
+  font-weight: bold;
+  height: 3rem;
+  width: 15rem;
+  border-radius: 3rem;
+  box-shadow: grey;
+  border: 1.5px solid #cccfcc;
+  background-image: linear-gradient(to right, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
+}
+
+.réservation button:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.function {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.container ol {
+  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 1.5rem;
+}
+
+.container li {
+  background-color: #f4f5f4;
+  padding: 1rem 1rem;
+  border: 1px solid black;
+  border-radius: 1rem 1rem;
+  box-shadow: #cccfcc;
+}
+
+.container li:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.container .fas {
+  margin-right: 1.5rem;
+  padding: 0.5rem;
+}
+
+.restaurant h2 {
+  text-align: center;
+  padding-top: 3.5rem;
+}
+
+.cards-content {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2.5rem;
 }

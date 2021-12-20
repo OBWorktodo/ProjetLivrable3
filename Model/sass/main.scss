@@ -1,9 +1,68 @@
-@use "layout/headers";
-@use "layout/footer";
+@import "layout/headers";
+@import "layout/footer";
 
-@use "utils/variable";
-@use "utils/mixins";
-@use "utils/normalize";
+@import "utils/variable";
+@import "utils/mixins";
+@import "utils/normalize";
+@import "utils/components";
 
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap');
 
+
+main{
+  font-family: 'Roboto', sans-serif;
+
+  /* Debut section localisation */
+  & .localisation{
+    @extend %grid-center;
+    @include grid-template-set ($localisation);
+    padding: 1em;
+    background: #eaeaea;
+    background: linear-gradient(
+        180deg,
+         rgba(173,173,173,.35) 0%,
+         rgba(234,234,234,.75) 15%,
+         rgba(234,234,234,1) 100%); 
+    & i {
+        padding: 0 0.5em 0 0;
+    }
+
+  }
+  /* Fin section localisation */
+
+  /* Debut section presentation */
+  .presentation {
+    @extend %grid-center;
+    @include grid-template-set ($presentation);
+    padding: 2em 0 3em;
+    background: #f6f6f6;
+    text-align: center;
+
+    & h2 {
+        padding: 0 5em;
+    }
+    & p {
+        padding: 1em 5em 2em;
+    }
+  }
+  /* Fin section presentation */
+  /* Debut section commentCaMarche */
+  & .commentCaMarche {
+    @extend %grid-center;
+    @include grid-template-set (1);
+    padding: 3em 1em;
+
+    & h2 {
+      @include grid-pos-set (1, auto, 1, 2);
+      justify-self: start;
+    }
+    & ol {
+      @include grid-pos-set (2, auto , 1 , 4);
+      display: grid;
+      @include grid-template-set ($commentCaMarche);
+      grid-gap: 2em;
+    }
+  }
+
+}

@@ -1,3 +1,18 @@
-@use "../utils/variable";
-@use "../utils/mixins";
-@use "../utils/normalize";
+
+@import '../utils/variable';
+@import '../utils/mixins';
+@import '../utils/components';
+
+header{
+  @extend %grid-center;
+  @include grid-template-set ($header);
+  padding: 1em;
+  & img {
+    @include grid-pos-set (1, auto, 1, auto);
+  }
+}
+  
+
+
+
+

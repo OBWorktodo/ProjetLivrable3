@@ -1,62 +1,17 @@
-@charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap");
-.title {
-  font-family: "Shrikhand", Arial, sans-serif;
-  text-align: center;
-  margin-bottom: 15px;
-  margin-top: 10px;
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap");
+main .commentCaMarche, main .presentation, main .localisation, header {
+  display: grid;
+  align-items: center;
+  justify-items: center;
 }
 
-body {
-  font-family: "Roboto", sans-serif;
-  margin: 0px;
-}
-
-/*
 header {
-  font-family: "Shrikhand", sans-serif;
-    & h1 {
-        text-align: center;
-        border: 1px solid $vert-clair;
-        font-family: "Shrikhand, sans-serif";
-        padding: 0.7rem;
-        box-shadow: 0px 3px 1px lightgrey;
-        position: relative;
-    }
-    & p{
-
-    }
-    & p:hover{
-
-    }
-    & p::before{
-
-    }
-    & p::after{
-
-    }
-
+  grid-template-columns: repeat(1, 1fr);
+  padding: 1em;
 }
-
-.container{
-    background-attachment: fixed;
-    & ol {
-
-        & li{
-
-            & i{
-
-            }
-        }
-    }
-}
-*/
-.localisation {
-  text-align: center;
-  padding: 1rem;
-  background-color: lightgray;
-  border: 1px solid orange;
+header img {
+  grid-row: 1 / auto;
+  grid-column: 1 / auto;
 }
 
 .footer {
@@ -143,87 +98,54 @@ th {
   padding: 0;
 }
 
-*,
-::before ::after {
-  box-sizing: border-box;
-  border: 1px solid blue;
-}
-
-main .fas fa-map-marker-alt {
-  display: flex;
+main .commentCaMarche, main .presentation, main .localisation, header {
+  display: grid;
   align-items: center;
-  justify-content: center;
-  gap: 2rem;
+  justify-items: center;
 }
 
-main .fas fa-map-marker-alt i {
-  font-size: 2rem;
+main {
+  font-family: "Roboto", sans-serif;
+  /* Debut section localisation */
+  /* Fin section localisation */
+  /* Debut section presentation */
+  /* Fin section presentation */
+  /* Debut section commentCaMarche */
 }
-
-.réservation {
+main .localisation {
+  grid-template-columns: repeat(1, 1fr);
+  padding: 1em;
+  background: #eaeaea;
+  background: linear-gradient(180deg, rgba(173, 173, 173, 0.35) 0%, rgba(234, 234, 234, 0.75) 15%, #eaeaea 100%);
+}
+main .localisation i {
+  padding: 0 0.5em 0 0;
+}
+main .presentation {
+  grid-template-columns: repeat(1, 1fr);
+  padding: 2em 0 3em;
+  background: #f6f6f6;
   text-align: center;
 }
-
-.réservation h2 {
-  margin-top: 3rem;
-  font-size: 1.5rem;
+main .presentation h2 {
+  padding: 0 5em;
 }
-
-.réservation button {
-  color: white;
-  font-weight: bold;
-  height: 3rem;
-  width: 15rem;
-  border-radius: 3rem;
-  box-shadow: grey;
-  border: 1.5px solid #cccfcc;
-  background-image: linear-gradient(to right, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
+main .presentation p {
+  padding: 1em 5em 2em;
 }
-
-.réservation button:hover {
-  transform: scale(1.05);
-  cursor: pointer;
+main .commentCaMarche {
+  grid-template-columns: repeat(1, 1fr);
+  padding: 3em 1em;
 }
-
-.function {
-  text-align: center;
-  margin-top: 3rem;
+main .commentCaMarche h2 {
+  grid-row: 1 / auto;
+  grid-column: 1 / 2;
+  justify-self: start;
 }
-
-.container ol {
-  border: 1px solid red;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  gap: 1.5rem;
-}
-
-.container li {
-  background-color: #f4f5f4;
-  padding: 1rem 1rem;
-  border: 1px solid black;
-  border-radius: 1rem 1rem;
-  box-shadow: #cccfcc;
-}
-
-.container li:hover {
-  transform: scale(1.05);
-  cursor: pointer;
-}
-
-.container .fas {
-  margin-right: 1.5rem;
-  padding: 0.5rem;
-}
-
-.restaurant h2 {
-  text-align: center;
-  padding-top: 3.5rem;
-}
-
-.cards-content {
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  margin-top: 2.5rem;
+main .commentCaMarche ol {
+  grid-row: 2 / auto;
+  grid-column: 1 / 4;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2em;
 }

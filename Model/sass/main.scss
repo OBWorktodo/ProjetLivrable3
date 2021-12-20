@@ -1,102 +1,68 @@
-@use "layout/headers";
-@use "layout/footer";
+@import "layout/headers";
+@import "layout/footer";
 
-@use "utils/variable";
-@use "utils/mixins";
-@use "utils/normalize";
+@import "utils/variable";
+@import "utils/mixins";
+@import "utils/normalize";
+@import "utils/components";
 
 
-@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap');
 
-*,
-::before 
-::after {
-box-sizing: border-box;
-border: 1px solid blue;
+
+main{
+  font-family: 'Roboto', sans-serif;
+
+  /* Debut section localisation */
+  & .localisation{
+    @extend %grid-center;
+    @include grid-template-set ($localisation);
+    padding: 1em;
+    background: #eaeaea;
+    background: linear-gradient(
+        180deg,
+         rgba(173,173,173,.35) 0%,
+         rgba(234,234,234,.75) 15%,
+         rgba(234,234,234,1) 100%); 
+    & i {
+        padding: 0 0.5em 0 0;
+    }
+
+  }
+  /* Fin section localisation */
+
+  /* Debut section presentation */
+  .presentation {
+    @extend %grid-center;
+    @include grid-template-set ($presentation);
+    padding: 2em 0 3em;
+    background: #f6f6f6;
+    text-align: center;
+
+    & h2 {
+        padding: 0 5em;
+    }
+    & p {
+        padding: 1em 5em 2em;
+    }
+  }
+  /* Fin section presentation */
+  /* Debut section commentCaMarche */
+  & .commentCaMarche {
+    @extend %grid-center;
+    @include grid-template-set (1);
+    padding: 3em 1em;
+
+    & h2 {
+      @include grid-pos-set (1, auto, 1, 2);
+      justify-self: start;
+    }
+    & ol {
+      @include grid-pos-set (2, auto , 1 , 4);
+      display: grid;
+      @include grid-template-set ($commentCaMarche);
+      grid-gap: 2em;
+    }
+  }
+
 }
-
-
-main .fas fa-map-marker-alt {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 2rem;
-  }
-  
-  main .fas fa-map-marker-alt i {
-    font-size: 2rem;
-  }
-  
-  
-  .réservation {
-    text-align: center;
-  }
-  
-  .réservation h2 {
-    margin-top: 3rem;
-    font-size: 1.5rem;
-  }
-  
-  .réservation button {
-    color: white;
-    font-weight: bold;
-    height: 3rem;
-    width: 15rem;
-    border-radius: 3rem;
-    box-shadow: grey;
-    border: 1.5px solid rgb(204, 207, 204);
-    background-image: linear-gradient(to right,
-      rgba(147, 86, 220, 0.9),
-      rgba(255, 121, 218, 0.9));
-  }
-  
-  .réservation button:hover {
-    transform: scale(1.05);
-    cursor: pointer;
-  }
-  
-  .function {
-    text-align: center;
-    margin-top: 3rem;
-  }
-  
-  .container ol{
-    border: 1px solid red;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    gap: 1.5rem;
-  }
-  
-  .container li{
-    background-color:rgb(244, 245, 244);
-    padding: 1rem 1rem;
-    border: 1px solid black;
-    border-radius:  1rem 1rem;
-    box-shadow: rgb(204, 207, 204);
-  }
-  
-  .container li:hover {
-    transform: scale(1.05);
-    cursor: pointer;
-  }
-  
-  
-  .container .fas{
-   margin-right: 1.5rem; 
-   padding: 0.5rem;
-  }
-  
-  
-  .restaurant h2{
-    text-align: center;
-    padding-top: 3.5rem;
-  }
-  
-  .cards-content {
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  margin-top: 2.5rem;
-  }

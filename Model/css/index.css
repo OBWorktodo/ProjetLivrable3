@@ -133,6 +133,9 @@ main .presentation h2 {
 main .presentation p {
   padding: 1em 5em 2em;
 }
+main .btn {
+  background: #FF79DA;
+}
 main .commentCaMarche {
   grid-template-columns: repeat(1, 1fr);
   padding: 3em 1em;

@@ -109,6 +109,24 @@ main {
   /* Debut section localisation */
   /* Fin section localisation */
   /* Debut section presentation */
+  /*
+  .btn{
+    @include ($rose-secondaire: #FF79DA);
+    @include ($violet-primaire: #9356DC);
+    transform: scale (1.05);
+    color: white;
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
+  }
+  & .gradient{
+    background-image: linear-gradient(to right, $rose-secondaire, $violet-primaire);
+  }
+  & .radius{
+    border: none;
+    border-radius: 2rem;
+  }
+  */
   /* Fin section presentation */
   /* Debut section commentCaMarche */
 }
@@ -135,6 +153,18 @@ main .presentation p {
 }
 main .btn {
   background: #FF79DA;
+  transform: scale 1.05;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  margin-top: 1.5rem;
+  background-image: linear-gradient(to right, #FF79DA, #9356DC);
+  border: none;
+  border-radius: 2rem;
+  width: 15rem;
+  margin: 0.5rem;
+  padding: 1rem;
+  text-decoration: none;
 }
 main .commentCaMarche {
   grid-template-columns: repeat(1, 1fr);

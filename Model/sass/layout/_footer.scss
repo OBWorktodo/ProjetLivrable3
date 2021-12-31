@@ -2,8 +2,26 @@
 @import '../utils/mixins';
 
 .footer{
-    text-align: center;
-    justify-content: center;
-    align-items: center;
+  @extend %grid-center;
+  @include grid-template-set (1);
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  background-color: $gris-sombre;
+}
+ /*
+ & h2 {
+  font-family: "Shrikhand", sans-serif;
+  font-weight: 250;
+}
+ & ul{
+
+ }
+  & li{
+
   }
+*/
+
+
+
   
